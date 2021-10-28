@@ -5,12 +5,12 @@ while True:
         p = float(input("\nProbability of better team winning: "))
 
         if 0.5 > p or p > 1:
-            raise Exception("valueNotInRange")
+            raise Exception("value not in range")
 
         g = int(input("\nLowest number of games the better team must win: "))
 
         if g % 2 == 0:
-            raise Exception("valueNotOdd")
+            raise Exception("value not odd")
 
         f = g - 1
 
