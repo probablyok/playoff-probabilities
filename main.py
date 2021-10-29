@@ -7,11 +7,15 @@ while True:
         if 0.5 > p or p > 1:
             raise Exception("value not in range")
 
-        g = int(input("\nLowest number of games the better team must win: "))
+        g = int(input("\nNumber of games in the playoff: "))
 
         if g <= 0:
             raise Exception("value less than or 0")
 
+        if g % 2 == 0:
+            raise Exception("value is not odd")
+
+        g -= 1
         f = g - 1
 
         terms = []
@@ -27,7 +31,7 @@ while True:
 
         print("\nOdds of better team winning playoffs:", betterTeamResult)
         print("Odds of worse team winning playoffs: ", worseTeamResult)
-        print("------------------------------------------------------")
+        print("--------------------------------------------------------")
 
     except Exception as e:
         print(e)
