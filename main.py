@@ -15,7 +15,7 @@ while True:
         if g % 2 == 0:
             raise Exception("value is not odd")
 
-        g -= 1
+        g = math.ceil(g / 2)
         f = g - 1
 
         terms = []
