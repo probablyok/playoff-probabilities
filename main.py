@@ -9,6 +9,9 @@ while True:
 
         g = int(input("\nLowest number of games the better team must win: "))
 
+        if g <= 0:
+            raise Exception("value less than or 0")
+
         f = g - 1
 
         terms = []
