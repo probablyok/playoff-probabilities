@@ -2,7 +2,7 @@ import math
 
 while True:
     try:
-        p = float(input("\nProbability of better team winning: "))
+        p = float(input("\nProbability of better team winning a game: "))
 
         if 0.5 > p or p > 1:
             raise Exception("value not in range")
